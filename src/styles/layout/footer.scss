@@ -120,12 +120,14 @@ $footer-styles: map.get($footer, $footer-theme);
 
 .footer__link {
 	position: relative;
-	color: map.get($footer-styles, linkColor);
+	// color: map.get($footer-styles, linkColor);
 	font-weight: 600;
 	text-decoration: underline;
 	transition: color 0.2s ease;
+	color:rgb(85, 188, 220);
 
 	&:hover {
-		color: map.get($footer-styles, linkHoverColor);
+		//color: map.get($footer-styles, linkHoverColor);
+		color: pink;
 	}
 }

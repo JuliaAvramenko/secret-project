@@ -159,7 +159,7 @@ $nav-styles: map.get($nav, $nav-theme);
 			bottom: 0;
 			left: 0;
 			width: 3px;
-			background-color: $green-300;
+			background-color: blue;
 			border-radius: 3px;
 			opacity: 0;
 			transition: opacity 0.2s ease;
@@ -189,7 +189,7 @@ $nav-styles: map.get($nav, $nav-theme);
 			bottom: 0;
 			left: 16px;
 			height: 3px;
-			background-color: $green-300;
+			background-color: red;
 			border-radius: 3px;
 			opacity: 0;
 			transition: opacity 0.2s ease;
@@ -205,32 +205,36 @@ $nav-styles: map.get($nav, $nav-theme);
 	}
 }
 
-.nav__menu-accent {
-	@extend .button;
-	justify-content: flex-start;
-	height: 64px;
-	padding-inline: 16px;
-	color: $white;
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 21px;
-	background-color: $green-600;
-	transition: background-color 0.2s ease;
+// .nav__menu-accent {
+// 	@extend .button;
+// 	justify-content: flex-start;
+// 	height: 64px;
+// 	padding-inline: 16px;
+// 	color: $white;
+// 	font-weight: 600;
+// 	font-size: 18px;
+// 	line-height: 21px;
+// 	background-color: $green-600;
+// 	transition: background-color 0.2s ease;
 
-	@include for-desktop-up {
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 16px;
-	}
+// 	@include for-desktop-up {
+// 		font-weight: 500;
+// 		font-size: 14px;
+// 		line-height: 16px;
+// 	}
 
-	&:hover {
-		background-color: $green-300;
-	}
-}
+// 	&:hover {
+// 		background-color: $green-300;
+// 	}
+// }
 
 .nav__menu-button {
 	@extend %size-64;
-	@extend %primary-green;
+	// @extend %primary-green;
+
+	&:hover {
+		background-color: rgb(85, 188, 220);
+	}
 
 	@include for-desktop-up {
 		height: 48px;

@@ -8,23 +8,31 @@
 	width: 100%;
     height: 700px;
 	justify-content: center;
-	background-image: url("../images/balloons.webp");
+	background-image: url("../images/balloons2.webp");
 	background-size: cover;
 	background-position: center;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;   
 	padding: 80px 0;
 
-	// @media (max-width: 1024px) {
-	// 	background: url("../images/hero-tablet-bg.jpg");
-	// 	background-size: cover;
-	// 	padding: 56px 0;
-	// }
+	@media (max-width: 1024px) {
+		// background: url("../images/hero-tablet-bg.jpg");
+		// background-size: cover;
+		padding: 56px 0;
+	}
 
     &__container {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        column-gap: 500px;
+        column-gap: 50px;       
+
+        @media (max-width: 768px){
+            column-gap: 50px;
+        }
+
+        @media (max-width: 600px){
+            flex-direction: column;
+        }
     }
 
     &__image {
@@ -33,6 +41,10 @@
         transform: rotate(-5deg);      
         position: relative;
         animation: move 2s infinite alternate;
+
+        @media (max-width: 768px){
+            width: 200px;
+        }
 
         @keyframes move {
             0% {
@@ -50,19 +62,28 @@
         height: 100%;
         object-fit: contain;
         transform: rotate(10deg);
+
+        @media (max-width: 768px){
+            width: 250px;
+
+        }
       
 }
 
 &__bd {
-    width: 300px;
+    width: 180px;
     height: auto;
     object-fit: contain;
     position: absolute;
-    top: 80px; 
-    left: 450px;    
+    top: 130px; 
+    left: 520px;    
     opacity: 0;
 transform: rotate(10deg) translateY(-100%);
 animation: slideDown 7s forwards;
+
+@media (max-width: 600px){
+    display: none;
+}
 
 @keyframes slideDown {
     0% {
@@ -77,15 +98,15 @@ animation: slideDown 7s forwards;
 }
 
 &__penguin {
-    width: 200px;
+    width: 150px;
     height: auto;
     object-fit: contain;
     position: absolute;
-    bottom: 75px; 
-    left: 500px;
+    bottom: 200px; 
+    left: 250px;
     opacity: 0;
-transform: translateY(100%);
-animation: slideUp 7s forwards;
+    transform: translateY(100%);
+    animation: slideUp 7s forwards;
 
 @keyframes slideUp {
     0% {
@@ -102,7 +123,7 @@ animation: slideUp 7s forwards;
 
 .gift {
     display: flex;
-    background-image: url("../images/gifts.webp");
+    background-image: url("../images/gifts.jpeg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -113,7 +134,8 @@ animation: slideUp 7s forwards;
         flex-direction: column;
         align-items: center;
         justify-content: center; 
-        row-gap: 20px;       
+        row-gap: 20px; 
+        width: 100%;      
     }
 
     &__wrapper {
@@ -126,15 +148,15 @@ animation: slideUp 7s forwards;
 
     &__title {
         font-size: 36px;
+        padding: 10px 40px;
         font-weight: 500;
         line-height: 40px;
         text-align: center;
-        background-color: rgb(231, 58, 58);
-        padding: 20px;
+        background-color: rgb(231, 58, 58);       
         border-radius: 50px;
 
         &_tango {
-            background-color: rgb(180, 72, 168);
+            background-color: rgb(119, 51, 177);
         }
 
         &_cake {
@@ -148,6 +170,16 @@ animation: slideUp 7s forwards;
         &_pig {
             background-color: rgb(226, 199, 41);
         }
+
+        &_swim {
+            background-color: rgb(214, 47, 208);
+        }
+
+        &_pot {
+            background-color: rgb(22, 36, 197);
+        }
+
+        
 
        
     }
@@ -163,11 +195,12 @@ animation: slideUp 7s forwards;
         z-index: 1;
         // animation: fadeOut 5s forwards;
         max-width: 800px;
+        width: 100%;
         cursor: pointer;
-transition: opacity 5s ease;
+        transition: opacity 5s ease;
 
         &_tango {
-            background-color: rgb(180, 72, 168);
+            background-color: rgb(119, 51, 177);
         }
 
         &_cake {
@@ -182,9 +215,21 @@ transition: opacity 5s ease;
             background-color: rgb(226, 199, 41);
         }
 
+        &_swim {
+            background-color: rgb(214, 47, 208);
+        }
+
+        &_pot {
+            background-color: rgb(22, 36, 197);
+        }
+
         &_hidden {
-            opacity: 0;
-            }
+            opacity: 0;            
+        }
+
+        @media (max-width: 600px){
+            padding: 0;
+        }
 
         // @keyframes fadeOut {
         //     0% {
@@ -202,6 +247,131 @@ transition: opacity 5s ease;
         object-fit: contain;
         position: absolute;
         z-index: 0;
+
+        &_tango {
+            height: 250px;
+        }
+    }
+
+    &__link {
+        width: 300px;
+        height: 200px;
+        object-fit: contain;
+        position: absolute;
+        z-index: 0;
+    }
+}
+
+.do {
+    display: flex;
+    background-image: url("../images/gifts_white.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+    height: 300px;
+
+   &_white {
+    background-image: none;
+    background-color: $white;
+   }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;        
+        height: 100%; 
+        
+    }    
+
+    &__title {
+        font-size: 120px;
+        font-weight: 900;
+        line-height: 70px;
+        text-align: center;
+        letter-spacing: 0.5em;
+        color: red;
+        background-color: rgb(85, 188, 220);
+        padding: 30px 0;
+        border-radius: 50px;   
+        width: 100%;
+
+        @media (max-width: 768px){
+            font-size: 50px;
+        font-weight: 700;
+        line-height: 40px;
+
+        }
+    }
+
+    &__text {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 50px;
+        text-align: center;
+        color: red;
+        background-color: rgb(85, 188, 220);
+        padding: 80px 100px;
+        border-radius: 50px;
+        z-index: 1;
+        // animation: fadeOut 15s forwards;       
+        transition: opacity 5s ease;       
+        width: 100%;
+
+        &_hidden {
+            opacity: 0;
+            
+        }
+
+        @keyframes fadeOut {
+            0% {
+            opacity: 1;
+            }
+            100% {
+            opacity: 0;
+            }
+            }
+    }
+
+    &__image {
+        width: 300px;
+        height: 200px;
+        object-fit: contain;
+        position: absolute;
+        z-index: 0;
+
+        &_tango {
+            height: 250px;
+        }
+    }
+}
+
+
+.love {
+    display: flex;
+    background-color: rgb(85, 188, 220);
+    padding: 32px;
+   
+
+   &_white {   
+    background-color: $white;
+   }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;        
+        height: 100%; 
+        
+    }    
+
+      &__image {
+        width: 500px;
+        height: 100%;
+        object-fit: contain;
+    
+     
 
         &_tango {
             height: 250px;

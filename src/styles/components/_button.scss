@@ -56,12 +56,12 @@
 	}
 
 	&:active {
-		background-color: $interface-green-hover;
+		// background-color: $interface-green-hover;
 	}
 
 	&:disabled {
 		color: $gray-800;
-		background-color: $gray-600;
+		// background-color: $gray-600;
 	}
 }
 
@@ -74,12 +74,12 @@
 
 	&:hover,
 	&:focus {
-		background-color: $green-300;
+		// background-color: $green-300;
 	}
 
 	&:active {
-		background-color: $interface-green-hover;
-		box-shadow: $shadow-green;
+		// background-color: $interface-green-hover;
+		// box-shadow: $shadow-green;
 	}
 
 	&:disabled {
