@@ -13,7 +13,7 @@ $nav: (
 		linkColor: $black
 	),
 	"dark": (
-		bgColor: $gray-300,
+		bgColor: $navy,
 		shadowColor: $shadow-dark,
 		togglerColor: $white,
 		logoColor: $white,
@@ -35,6 +35,17 @@ $nav-styles: map.get($nav, $nav-theme);
 
 	@include for-desktop-up {
 		height: 64px;
+	}
+
+	&__logo-image {
+		height: 100%;
+	}
+
+	
+	&__icon {
+		width: 100%;
+		height: 30px;
+		object-fit: contain;
 	}
 }
 
@@ -105,6 +116,7 @@ $nav-styles: map.get($nav, $nav-theme);
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+		gap: 10px;
 	}
 }
 

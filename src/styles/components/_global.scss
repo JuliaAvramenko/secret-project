@@ -17,7 +17,11 @@ $fonts: (
 	min-width: 360px;
 	color: $white;
 	font-family: "Kaspersky Sans Display", sans-serif;
-	background-color: $gray-100;
+	// background-color: $gold;
+	background-image: url("../images/gifts.webp");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 
 	@each $key, $value in $fonts {
 		[lang="#{$key}"] & {
